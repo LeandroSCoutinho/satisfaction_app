@@ -10,7 +10,7 @@ function App() {
     <main className={styles.container}>
         <Header/>
           <form >
-            <div class="box">
+            <div className={styles.box}>
               <input id="nota1" type="radio" name="nota_atendimento" value="1"/>
               <label for="nota1" ><img src="1.png" alt="nota 1"/></label>
 
