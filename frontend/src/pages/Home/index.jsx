@@ -4,18 +4,18 @@ import styles from "../../styles/home.module.scss"
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-import {setupApi} from "../../services/api";
+import {setupAPIClient} from "../../services/api";
 
 export default function Home(){
 
    async function handleEvaluation(value){
-        const data = {
-            nota: value
-        }
-        const api = setupApi();
-        console.log(data)
-        await api.post('/grade', data) 
-        alert('nota salva com sucesso!')
+    
+    const apiClient = setupAPIClient();
+
+    await apiClient.post('/nota', {
+        nota: value
+    });
+       
     }
 
     return(
@@ -38,7 +38,7 @@ export default function Home(){
                 <input id="nota5" type="radio" name="nota_atendimento" value="5" onClick={(e) => {handleEvaluation(e.target.value)}}/>      
                 <label for="nota5" ><img src="5.png" alt="nota 5"/></label>
                 </div>
-                <div class="sombra"></div>
+                <div className={styles.sombra}></div>
             </form>
             <Footer/> 
         </main>
