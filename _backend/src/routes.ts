@@ -3,7 +3,7 @@ import { CreateGradeController } from "./controllers/grade/CreateGradeController
 
 const router = Router();
 
-router.post('/grade', new CreateGradeController().handle);
+router.post('/nota', new CreateGradeController().handle);
 
 
 export {router};

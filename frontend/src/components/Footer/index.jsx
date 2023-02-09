@@ -1,6 +1,9 @@
+import styles from './styles.module.scss';
 
 export default function Footer(){
     return(
-        <h1>Footer</h1>
+        <footer className={styles.footer}>
+            <img src="hand-logo.png" />
+        </footer>
     )
 }

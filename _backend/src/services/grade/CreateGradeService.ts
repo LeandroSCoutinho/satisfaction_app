@@ -1,18 +1,18 @@
 import prismaClient from "../../prisma";
 
 interface GradeRequest{
-    grade: string
+    nota: string
 }
 
 class CreateGradeService{
-    async execute({grade}:GradeRequest){
-        if(!grade){
+    async execute({nota}:GradeRequest){
+        if(!nota){
             throw new Error('Favor informar uma nota!');
         }
 
         const assessment = await prismaClient.nota.create({
             data:{
-                nota: grade
+                nota: nota
             }
         })
         return assessment;
