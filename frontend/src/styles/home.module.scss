@@ -11,3 +11,20 @@
 .box input{
     display: none;
 }
+
+.sombra{
+    width: 500px;
+    border: 0;
+    box-shadow: 0 0 50px 15px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .box input:checked + label > img {
+    border: none;  
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+
+  .box img{
+    cursor: pointer;
+  }
